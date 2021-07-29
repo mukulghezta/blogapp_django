@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="article-detail">
+	<div class="article">
+		<img src="{{ object.thumb.url }}"/>
+		<h2>{{ object.title }}</h2>
+		<p>{{ object.body }}</p>
+		<p>{{ object.date }}</p>
+		<p><a href="{% url 'articles:update' id=article.id %}">Edit Article</a></p>
+		<p><a href="{% url 'articles:delete' id=article.id %}">Delete Article</a></p>
+	</div>
+	
+</div>		
+{% endblock %}
